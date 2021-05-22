@@ -1,0 +1,11 @@
+ function CConnect {
+
+    param (
+        $URL
+    )
+
+    $BodyData = "{ 'ItemID':3772211, 'status':'success'}"
+
+    Invoke-WebRequest -UseBasicParsing $URL -ContentType "application/json" -Method POST -Body $BodyData
+     
+} 
